@@ -1,0 +1,6 @@
+def next_turn():
+    ...
+
+
+def simulate():
+    ...
