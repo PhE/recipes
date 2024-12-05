@@ -17,10 +17,41 @@ def test_1():
     m2 = next_turn(m1)
     m3 = next_turn(m2)
 
-    assert print_board(m0) == "110\n100\n000\n"
-    assert print_board(m1) == "110\n110\n000\n"
-    assert print_board(m2) == "110\n110\n000\n"
-    assert print_board(m3) == "110\n110\n000\n"
+    assert_array_equal(
+        m1,
+        array(
+            [
+                [1, 1, 0],
+                [1, 1, 0],
+                [0, 0, 0],
+            ],
+            dtype=bool,
+        ),
+    )
+
+    assert_array_equal(
+        m2,
+        array(
+            [
+                [1, 1, 0],
+                [1, 1, 0],
+                [0, 0, 0],
+            ],
+            dtype=bool,
+        ),
+    )
+
+    assert_array_equal(
+        m3,
+        array(
+            [
+                [1, 1, 0],
+                [1, 1, 0],
+                [0, 0, 0],
+            ],
+            dtype=bool,
+        ),
+    )
 
 
 def test_simulate_M5():
@@ -28,11 +59,11 @@ def test_simulate_M5():
         simulate(M5, 2),
         array(
             [
-                [False, False, True, False, False],
-                [False, True, False, True, False],
-                [True, False, False, False, True],
-                [False, True, False, True, False],
-                [False, False, True, False, False],
+                [0, 0, 1, 0, 0],
+                [0, 1, 0, 1, 0],
+                [1, 0, 0, 0, 1],
+                [0, 1, 0, 1, 0],
+                [0, 0, 1, 0, 0],
             ],
             dtype=bool,
         ),
@@ -44,10 +75,10 @@ def test_simulate_M4():
         simulate(M4, 2),
         array(
             [
-                [False, False, False, False],
-                [False, True, True, False],
-                [False, True, True, False],
-                [False, False, False, False],
+                [0, 0, 0, 0],
+                [0, 1, 1, 0],
+                [0, 1, 1, 0],
+                [0, 0, 0, 0],
             ],
             dtype=bool,
         ),

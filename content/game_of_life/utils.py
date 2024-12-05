@@ -2,13 +2,10 @@ from numpy import array, ndarray
 
 
 def print_board(M: ndarray):
-    msg = ""
     for ligne in M:
         for cellule in ligne:
-            msg = msg + str(int(cellule))
-        msg = msg + "\n"
-    print(msg, end="")
-    return msg
+            print(str(int(cellule)), end="")
+        print()
 
 
 def neighborhood(M: ndarray, i: int, j: int) -> list:
