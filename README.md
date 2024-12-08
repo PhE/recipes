@@ -2,7 +2,11 @@
 
 [![try-it](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://phe.github.io/recipes/)
 
-JupyterLite deployed as a static site to GitHub Pages, for demo purposes.
+JupyterLite deployed as a static site to GitHub Pages, for teaching purposes.
+
+
+In this repository you will find some public ressources I use to teach computer science
+to students.
 
 ## ✨ Try it in your browser ✨
 
@@ -32,5 +36,6 @@ For more info, keep an eye on the JupyterLite documentation:
 ## initial setup
 
 ```
+uv venv
 uv pip install -r requirements.txt
 ```

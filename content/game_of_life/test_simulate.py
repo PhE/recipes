@@ -4,6 +4,9 @@ from numpy.testing import assert_array_equal
 from test_utils import M1, M4, M5
 
 
+def test_0():
+    assert_array_equal(M1, M1)
+
 def test_1():
     m0 = array(
         [
