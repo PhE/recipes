@@ -34,3 +34,10 @@ For more info, keep an eye on the JupyterLite documentation:
 ```
 uv pip install -r requirements.txt
 ```
+
+## usefull links
+
+To learn/tech Python:
+* [pythontutor](https://pythontutor.com/)
+* [awesome-python](https://github.com/vinta/awesome-python)
+
