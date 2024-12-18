@@ -33,8 +33,8 @@ M5 = array(
 
 
 def test_bidon():
-    assert True
     assert 2 == 1 + 1
+    assert 10 == 2 * 5
 
 
 def test_vide():
@@ -50,15 +50,21 @@ def test_vide():
 
 def test_2():
     """
-    exemples p9
+    exemples page 9
     """
-    M = array([[1, 0, 1], [0, 0, 0], [1, 0, 1]], dtype="bool")
+    M = array([
+        [1, 0, 1],
+        [0, 0, 0],
+        [1, 0, 1],
+    ], dtype="bool")
 
     # comme indiqué l'odre n'est pas important
     assert neighborhood(M, 0, 0) == [False, False, False]
     assert neighborhood(M, 1, 2) == [False, True, False, False, True]
     assert neighborhood(M, 1, 1) == [True, False, True, False, False, True, False, True]
 
-
-def test_2b():
-    assert True
+    # vu avec Lycia, bug des coins manquants
+    #TODO: uncomment to fix pending errors
+    #assert neighborhood(M, 2, 0) == [False, False, False]
+    #assert neighborhood(M, 2, 2) == [False, False, False]
+    #assert neighborhood(M, 0, 2) == [False, False, False]    
